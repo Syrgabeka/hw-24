@@ -36,17 +36,8 @@ function addShop(param) {
     shoping.push(objShop);
   }
   displayShop();
-  function sumAll() {
-    let sums = 0;
-    for (let i = 0; i < shoping.length; i++) {
-      let numPrice = shoping[i].price;
-      let numPriceTwo = parseInt(numPrice);
-      sums += numPriceTwo;
-    }
-    console.log(sums);
-    allPrice.innerHTML = sums;
-  }
   sumAll();
+  console.log(shoping);
 }
 
 let allPrice = document.querySelector(".all-price");
@@ -54,16 +45,24 @@ let dataOutput = document.querySelector(".table-out");
 
 function displayShop() {
   let displayShop = "";
+  let x = shoping.length - 1;
   shoping.forEach(function (item) {
-    displayShop += `
+    displayShop += `<tr id="${x}">
     <td >${item.model}</td> 
     <td>${item.quantity}</td> 
     <td>${item.price}</td> 
-    <td><button>${item.pemove}</button></td>`;
+    <td><button id="delete" onclick="shoping.splice(${x},1) displayShop">${item.remove}</button></td>
+    </tr>`;
     dataOutput.innerHTML = displayShop;
   });
 }
 
-function remove() {
-  shoping.splice(x, 1);
+function sumAll() {
+  let sums = 0;
+  for (let i = 0; i < shoping.length; i++) {
+    let numPrice = shoping[i].price;
+    let numPriceTwo = parseInt(numPrice);
+    sums += numPriceTwo;
+  }
+  allPrice.innerHTML = sums;
 }
