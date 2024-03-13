@@ -46,12 +46,13 @@ let dataOutput = document.querySelector(".table-out");
 function displayShop() {
   let displayShop = "";
   let x = shoping.length - 1;
-  shoping.forEach(function (item) {
+
+  shoping.forEach(function (item, x) {
     displayShop += `<tr id="${x}">
     <td >${item.model}</td> 
     <td>${item.quantity}</td> 
     <td>${item.price}</td> 
-    <td><button id="delete" onclick="shoping.splice(${x},1) displayShop">${item.remove}</button></td>
+    <td><button id="delete" onclick="shoping.splice(${x}, 1) displayShop()" >${item.remove}</button></td>
     </tr>`;
     dataOutput.innerHTML = displayShop;
   });
