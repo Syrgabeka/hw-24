@@ -37,8 +37,8 @@ function addShop(param) {
   }
   displayShop();
   function sumAll() {
-    var sums = 0;
-    for (var i = 0; i < shoping.length; i++) {
+    let sums = 0;
+    for (let i = 0; i < shoping.length; i++) {
       let numPrice = shoping[i].price;
       let numPriceTwo = parseInt(numPrice);
       sums += numPriceTwo;
