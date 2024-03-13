@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Store</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="one-page">
+      <div class="list">
+        <p class="list-name">Product List</p>
+        <div class="product-selection">
+          <div class="product">
+            <img
+              class="product-foto-big"
+              src="./img/Apple iPhone 13 128GB зеленый перед.png"
+            />
+
+            <div class="img-button">
+              <img
+                class="foto-small"
+                src="./img/Apple iPhone 13 128GB зеленый с боку.png"
+              />
+              <img
+                class="foto-small"
+                src="./img/Apple iPhone 13 128GB зеленый из далека.png"
+              />
+            </div>
+
+            <div class="description">
+              <p class="model model-green">Apple iPhone 13 128GB зеленый</p>
+              <p class="price price-green">55000</p>
+              <button onclick="addShop(1)" class="shopping">В корзину</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              class="product-foto-big"
+              src="./img/Apple iPhone 13 128GB зеленый перед.png"
+            />
+
+            <div class="img-button">
+              <img
+                class="foto-small"
+                src="./img/Apple iPhone 13 128GB зеленый с боку.png"
+              />
+              <img
+                class="foto-small"
+                src="./img/Apple iPhone 13 128GB зеленый из далека.png"
+              />
+            </div>
+
+            <div class="description">
+              <p class="model model-star">
+                Apple iPhone 13 128GB сияющая звезда
+              </p>
+              <p class="price price-star">54850</p>
+              <button onclick="addShop(2)" class="shopping">В корзину</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              class="product-foto-big"
+              src="./img/Apple iPhone 13 128GB зеленый перед.png"
+            />
+
+            <div class="img-button">
+              <img
+                class="foto-small"
+                src="./img/Apple iPhone 13 128GB зеленый с боку.png"
+              />
+              <img
+                class="foto-small"
+                src="./img/Apple iPhone 13 128GB зеленый из далека.png"
+              />
+            </div>
+
+            <div class="description">
+              <p class="model model-red">Apple iPhone 13 128GB красный</p>
+              <p class="price price-red">53710</p>
+              <button onclick="addShop(3)" class="shopping">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zacladka">
+        <p class="zacladka-name">Shoping Cart</p>
+
+        <table class="table">
+          <tr>
+            <th class="width-colum">Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Remove</th>
+          </tr>
+
+          <tr class="table-out table"></tr>
+
+          <tr class="button-table">
+            <td class="total-price">Total:</td>
+            <td></td>
+            <td class="all-price"></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

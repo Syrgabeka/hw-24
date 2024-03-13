@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.one-page {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 15px 1%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+.list {
+  border: 2px solid #f0e1c4;
+}
+
+.list-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #e7e0d1;
+}
+.product-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.product {
+  padding: 25px;
+}
+.product-foto-big {
+  width: 100%;
+}
+.foto-small {
+  width: 45%;
+}
+.foto-small {
+  width: 45%;
+}
+.description {
+  text-align: center;
+  font-weight: bold;
+}
+.model {
+  font-size: 20px;
+}
+.price {
+  font-size: 30px;
+  color: red;
+}
+.shopping {
+  width: 70%;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgb(255, 217, 0);
+  border: none;
+}
+.shopping:active {
+  background-color: gray;
+}
+
+.zacladka {
+  border: 2px solid #f0e1c4;
+}
+.zacladka-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #e7e0d1;
+}
+.table {
+  width: 97%;
+  font-size: 20px;
+  text-align: left;
+  margin: 5px 15px;
+  text-align: center;
+}
+th,
+td {
+  padding: 5px 0;
+  border-bottom: 1px solid #f0e1c4;
+}
+tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+}
+
+.button-table {
+  font-size: 27px;
+  font-weight: bold;
+}
