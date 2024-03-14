@@ -1,7 +1,7 @@
 const modelGreen = document.querySelector(".model-green").innerHTML;
 const priceGreen = document.querySelector(".price-green").innerHTML;
 
-const modelStar = document.querySelector(".model-star").innerHTML.trim();
+const modelStar = document.querySelector(".model-star").innerHTML;
 const priceStar = document.querySelector(".price-star").innerHTML;
 
 const modelRed = document.querySelector(".model-red").innerHTML;
@@ -10,8 +10,11 @@ const priceRed = document.querySelector(".price-red").innerHTML;
 let shoping = [];
 
 function addShop(param) {
+  let idNum = Math.random();
+
   if (param === 1) {
     let objShop = {
+      id: idNum,
       model: modelGreen,
       quantity: 1,
       price: priceGreen,
@@ -20,6 +23,7 @@ function addShop(param) {
     shoping.push(objShop);
   } else if (param === 2) {
     let objShop = {
+      id: idNum,
       model: modelStar,
       quantity: 1,
       price: priceStar,
@@ -28,6 +32,7 @@ function addShop(param) {
     shoping.push(objShop);
   } else {
     let objShop = {
+      id: idNum,
       model: modelRed,
       quantity: 1,
       price: priceRed,
@@ -45,18 +50,25 @@ let dataOutput = document.querySelector(".table-out");
 
 function displayShop() {
   let displayShop = "";
-  let x = shoping.length - 1;
+  dataOutput.innerHTML = "";
 
-  shoping.forEach(function (item, x) {
-    displayShop += `<tr id="${x}">
+  shoping.forEach(function (item) {
+    displayShop += `<tr>
     <td >${item.model}</td> 
     <td>${item.quantity}</td> 
     <td>${item.price}</td> 
-    <td><button id="delete" onclick="shoping.splice(${x}, 1) displayShop()" >${item.remove}</button></td>
+    <td><button id="delete" onclick="remov(${item.id})" >delete</button></td>
     </tr>`;
     dataOutput.innerHTML = displayShop;
   });
 }
+
+const remov = (param) => {
+  const filteredTasks = shoping.filter(({ id }) => id !== param);
+
+  shoping = filteredTasks;
+  displayShop();
+};
 
 function sumAll() {
   let sums = 0;
@@ -67,3 +79,4 @@ function sumAll() {
   }
   allPrice.innerHTML = sums;
 }
+
